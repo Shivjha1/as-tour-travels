@@ -3,184 +3,220 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="AS Tour and Travels - Railway ticket booking assistance and travel services.">
-  <title>AS Tour and Travels | Railway Ticket Booking Assistance</title>
+  <title>AS Tour & Travels | Travel Booking</title>
+  <meta name="description" content="Book train, flight, bus, hotel, cab and tour services with AS Tour & Travels.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="header">
-    <div class="container nav">
-      <a class="brand" href="#home">
-        <span class="brand-mark">🚆</span>
-        <span><strong>A.S</strong> Tour & Travels</span>
-      </a>
-      <button class="menu-btn" aria-label="Open menu" onclick="toggleMenu()">☰</button>
-      <nav id="navMenu">
-        <a href="#home">Home</a>
-        <a href="#services">Services</a>
-        <a href="#classes">Classes</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </nav>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="#home">AS Tour & Travels</a>
+    <button class="menu-toggle" aria-label="Open menu">☰</button>
+    <nav id="mainNav">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#packages">Tour Packages</a>
+      <a href="#train-booking">Train Booking</a>
+      <a href="#why-us">Why Choose Us</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section id="home" class="hero">
+    <div class="container hero-content">
+      <div>
+        <p class="eyebrow">TRAVEL • BOOKING • SUPPORT</p>
+        <h1>Book Your Journey With Us</h1>
+        <p class="hero-text">Simple travel enquiries for trains, flights, buses, hotels, cabs and tour packages.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#train-booking">Book Now</a>
+          <a class="btn whatsapp" id="heroWhatsApp" href="#" target="_blank" rel="noopener">WhatsApp Us</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="hero-logo">AS</div>
+        <h2>AS Tour & Travels</h2>
+        <p>Quick response • Easy booking • Customer support</p>
+      </div>
     </div>
-  </header>
+  </section>
 
-  <main id="home">
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <span class="eyebrow">🚆 RAILWAY TICKET ASSISTANCE</span>
-          <h1>रेलवे टिकट<br><span>बुकिंग सेवा</span></h1>
-          <p class="tagline">हर टिकट, आपकी सुविधा के साथ</p>
-          <p class="intro">
-            Experienced railway ticket booking assistance for General, Tatkal,
-            Premium Tatkal and other available categories.
-          </p>
-          <div class="hero-buttons">
-            <a class="btn primary" href="#contact">Contact Us</a>
-            <a class="btn whatsapp" id="heroWhatsApp" href="#" target="_blank" rel="noopener">WhatsApp</a>
-          </div>
-          <p class="notice">Please contact us for booking assistance and availability. Ticket confirmation is subject to railway availability and applicable rules.</p>
-        </div>
-        <div class="hero-image-wrap">
-          <img src="poster.jpg" alt="AS Tour and Travels railway ticket service poster">
-        </div>
+  <section id="services" class="section">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">WHAT WE OFFER</p>
+        <h2>Our Services</h2>
       </div>
-    </section>
-
-    <section class="trust">
-      <div class="container trust-grid">
-        <div><b>✓</b><span>Experienced Assistance</span></div>
-        <div><b>✓</b><span>Fast Response</span></div>
-        <div><b>✓</b><span>24×7 Contact</span></div>
-        <div><b>✓</b><span>Customer Support</span></div>
-        <div><b>✓</b><span>Transparent Service</span></div>
+      <div class="cards services-grid">
+        <article class="card"><span>🚆</span><h3>Train Ticket Booking</h3><p>Send your journey details for a booking enquiry.</p></article>
+        <article class="card"><span>✈️</span><h3>Flight Booking</h3><p>Flight booking assistance and enquiries.</p></article>
+        <article class="card"><span>🚌</span><h3>Bus Booking</h3><p>Bus travel booking assistance.</p></article>
+        <article class="card"><span>🏨</span><h3>Hotel Booking</h3><p>Hotel stay enquiries and booking assistance.</p></article>
+        <article class="card"><span>🚕</span><h3>Cab / Taxi</h3><p>Local and travel cab enquiries.</p></article>
+        <article class="card"><span>🧳</span><h3>Tour Packages</h3><p>Ask about available destinations and packages.</p></article>
+        <article class="card"><span>📄</span><h3>Passport / Visa Assistance</h3><p>Available only where this service is provided.</p></article>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section" id="services">
-      <div class="container">
-        <div class="section-heading">
-          <span class="eyebrow">OUR SERVICES</span>
-          <h2>Railway Ticket Assistance</h2>
-          <p>Tell us your journey requirements and contact us for assistance.</p>
-        </div>
-        <div class="cards">
-          <article class="card"><div class="icon">🎫</div><h3>General</h3><p>Assistance for general ticket requirements.</p></article>
-          <article class="card featured"><div class="icon">⚡</div><h3>Tatkal</h3><p>Assistance for Tatkal booking requirements.</p></article>
-          <article class="card"><div class="icon">⭐</div><h3>Premium Tatkal</h3><p>Assistance for Premium Tatkal requirements.</p></article>
-          <article class="card"><div class="icon">👩</div><h3>Ladies</h3><p>Assistance for eligible ladies quota requirements.</p></article>
-          <article class="card"><div class="icon">👴</div><h3>Senior Citizen</h3><p>Assistance for eligible passenger requirements.</p></article>
-          <article class="card"><div class="icon">♿</div><h3>Divyang</h3><p>Assistance for eligible Divyang quota requirements.</p></article>
-          <article class="card"><div class="icon">🪪</div><h3>Duty Pass</h3><p>Assistance for applicable duty pass requirements.</p></article>
-          <article class="card"><div class="icon">🪖</div><h3>Military</h3><p>Assistance for applicable military quota requirements.</p></article>
-          <article class="card"><div class="icon">➕</div><h3>Other Categories</h3><p>Ask us about other applicable categories.</p></article>
-        </div>
+  <section id="packages" class="section alt">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">TRAVEL IDEAS</p>
+        <h2>Tour Packages</h2>
       </div>
-    </section>
-
-    <section class="section classes-section" id="classes">
-      <div class="container">
-        <div class="section-heading light-heading">
-          <span class="eyebrow">TRAVEL CLASSES</span>
-          <h2>AC & Non-AC Classes</h2>
-        </div>
-        <div class="class-grid">
-          <div class="class-panel ac">
-            <h3>❄️ AC Classes</h3>
-            <div class="class-items">
-              <div><strong>1AC</strong><span>First AC</span></div>
-              <div><strong>2AC</strong><span>Second AC</span></div>
-              <div><strong>3AC</strong><span>Third AC</span></div>
-            </div>
-          </div>
-          <div class="class-panel nonac">
-            <h3>🌀 Non-AC Classes</h3>
-            <div class="class-items">
-              <div><strong>SL</strong><span>Sleeper</span></div>
-              <div><strong>2S</strong><span>Second Sitting</span></div>
-            </div>
-          </div>
-        </div>
+      <div class="cards package-grid">
+        <article class="card package">
+          <h3>Custom Tour</h3>
+          <p><strong>Destination:</strong> Choose your destination</p>
+          <p><strong>Days:</strong> Flexible</p>
+          <p><strong>Starting price:</strong> Contact us</p>
+          <p><strong>Included:</strong> Package details provided on enquiry.</p>
+          <a class="text-btn package-enquire" href="#">Enquire Now →</a>
+        </article>
+        <article class="card package">
+          <h3>Family / Group Tour</h3>
+          <p><strong>Destination:</strong> As requested</p>
+          <p><strong>Days:</strong> Flexible</p>
+          <p><strong>Starting price:</strong> Contact us</p>
+          <p><strong>Included:</strong> Itinerary and inclusions on enquiry.</p>
+          <a class="text-btn package-enquire" href="#">Enquire Now →</a>
+        </article>
+        <article class="card package">
+          <h3>Weekend Trip</h3>
+          <p><strong>Destination:</strong> Ask for available options</p>
+          <p><strong>Days:</strong> 2–3 days</p>
+          <p><strong>Starting price:</strong> Contact us</p>
+          <p><strong>Included:</strong> Details provided before booking.</p>
+          <a class="text-btn package-enquire" href="#">Enquire Now →</a>
+        </article>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section about" id="about">
-      <div class="container about-grid">
-        <div>
-          <span class="eyebrow">ABOUT US</span>
-          <h2>Railway booking assistance you can reach easily.</h2>
-          <p>
-            AS Tour & Travels provides railway ticket booking assistance based
-            on the customer's journey requirements. We focus on clear
-            communication, quick response and convenient customer support.
-          </p>
-          <p>
-            <strong>Important:</strong> Railway ticket availability and
-            confirmation depend on the official railway system, applicable
-            quotas and railway rules. We do not guarantee ticket confirmation.
-          </p>
-        </div>
-        <div class="experience-box">
-          <span class="big-icon">🚆</span>
-          <h3>Our Experience</h3>
-          <p>Experienced in helping customers with railway ticket booking requirements.</p>
-          <a class="btn primary" href="#contact">Talk to Us</a>
-        </div>
+  <section id="train-booking" class="section">
+    <div class="container booking-layout">
+      <div class="section-heading">
+        <p class="eyebrow">TRAIN ENQUIRY</p>
+        <h2>Train Ticket Booking</h2>
+        <p>Submit your journey details and we'll send the enquiry to WhatsApp and your connected Google Sheet.</p>
+        <div class="notice">Ticket confirmation depends on availability and applicable booking rules. No 100% confirmation guarantee is made.</div>
       </div>
-    </section>
 
-    <section class="section contact-section" id="contact">
-      <div class="container contact-grid">
-        <div>
-          <span class="eyebrow">CONTACT US</span>
-          <h2>Plan your journey with us.</h2>
-          <p>Send your journey details through WhatsApp or call directly.</p>
-          <div class="contact-person">
-            <div class="person-icon">👤</div>
-            <div>
-              <span>Contact Name</span>
-              <h3>Ashish Kumar Jha</h3>
-            </div>
-          </div>
-          <div class="contact-actions">
-            <a class="btn primary" id="callButton" href="tel:+918298500120">📞 +91 82985 00120</a>
-            <a class="btn whatsapp" id="whatsappButton" href="#" target="_blank" rel="noopener">💬 WhatsApp</a>
-          </div>
+      <form id="bookingForm" class="booking-form">
+        <div class="form-row">
+          <label>From
+            <input id="from" name="from" required placeholder="Departure station">
+          </label>
+          <label>To
+            <input id="to" name="to" required placeholder="Destination station">
+          </label>
         </div>
 
-        <form class="contact-form" onsubmit="sendWhatsApp(event)">
-          <h3>Send Journey Details</h3>
-          <label>From Station<input id="from" required placeholder="e.g. Delhi"></label>
-          <label>To Station<input id="to" required placeholder="e.g. Patna"></label>
-          <label>Journey Date<input id="date" type="date" required></label>
-          <label>Class
-            <select id="className">
+        <div class="form-row">
+          <label>Journey date
+            <input id="date" name="date" type="date" required>
+          </label>
+          <label>Class preference
+            <select id="className" name="className" required>
+              <option value="">Select class</option>
               <option>General</option>
-              <option>Tatkal</option>
-              <option>Premium Tatkal</option>
-              <option>1AC</option>
-              <option>2AC</option>
-              <option>3AC</option>
               <option>Sleeper (SL)</option>
-              <option>2S</option>
+              <option>AC 3 Tier (3A)</option>
+              <option>AC 2 Tier (2A)</option>
+              <option>AC First Class (1A)</option>
+              <option>Chair Car (CC)</option>
+              <option>Executive Chair Car (EC)</option>
             </select>
           </label>
-          <label>Passengers<input id="passengers" type="number" min="1" max="20" value="1" required></label>
-          <button class="btn primary full" type="submit">Send on WhatsApp</button>
-        </form>
-      </div>
-    </section>
-  </main>
+        </div>
 
-  <footer>
-    <div class="container footer-content">
-      <div><strong>🚆 A.S Tour & Travels</strong><p>रेलवे टिकट बुकिंग सेवा</p></div>
-      <div><a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+        <div class="form-row">
+          <label>Passenger details
+            <input id="passengers" name="passengers" type="number" min="1" max="20" required placeholder="Number of passengers">
+          </label>
+          <label>Phone / WhatsApp
+            <input id="customerPhone" name="customerPhone" type="tel" required placeholder="Your phone number">
+          </label>
+        </div>
+
+        <button class="btn primary full" type="submit">Send Booking Enquiry</button>
+        <p id="formStatus" class="form-status" aria-live="polite"></p>
+      </form>
     </div>
-    <div class="copyright">© <span id="year"></span> AS Tour & Travels. All rights reserved.</div>
-  </footer>
+  </section>
 
-  <script src="script.js"></script>
+  <section id="why-us" class="section dark">
+    <div class="container">
+      <div class="section-heading light">
+        <p class="eyebrow">WHY US</p>
+        <h2>Why Choose Us</h2>
+      </div>
+      <div class="why-grid">
+        <div><b>✓ Easy booking</b><span>Simple enquiry process.</span></div>
+        <div><b>✓ Quick response</b><span>We aim to respond promptly.</span></div>
+        <div><b>✓ Transparent pricing</b><span>Pricing and inclusions explained before booking.</span></div>
+        <div><b>✓ Customer support</b><span>Help with your travel enquiry.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="container about">
+      <div>
+        <p class="eyebrow">ABOUT US</p>
+        <h2>AS Tour & Travels</h2>
+        <p>We help customers with travel booking enquiries and travel-related services. Contact us for availability, pricing and booking assistance.</p>
+      </div>
+      <div class="info-box">
+        <p><strong>Location:</strong> Add your business location</p>
+        <p><strong>Phone:</strong> Add your business phone</p>
+        <p><strong>Email:</strong> Add your business email</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section alt">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">GET IN TOUCH</p>
+        <h2>Contact</h2>
+      </div>
+      <div class="contact-grid">
+        <a class="contact-card" id="contactWhatsApp" href="#" target="_blank" rel="noopener"><span>💬</span><b>WhatsApp</b><small>Chat with us</small></a>
+        <a class="contact-card" href="tel:+918298500120"><span>📞</span><b>Phone</b><small>+91 82985 00120</small></a>
+        <a class="contact-card" href="mailto:your-email@example.com"><span>✉️</span><b>Email</b><small>your-email@example.com</small></a>
+        <div class="contact-card"><span>📍</span><b>Address</b><small>Add your business address</small></div>
+      </div>
+      <div class="map-placeholder">Google Maps location — replace this area with your Google Maps embed.</div>
+    </div>
+  </section>
+
+  <section class="legal section">
+    <div class="container legal-grid">
+      <article id="privacy"><h2>Privacy Policy</h2><p>We use information submitted through this website only to respond to travel enquiries and provide requested services. Do not submit passwords, payment PINs or unnecessary sensitive information.</p></article>
+      <article id="terms"><h2>Terms & Conditions</h2><p>Availability, fares, schedules, hotel rates and service conditions can change. Bookings are subject to provider rules and applicable charges. Information and prices should be confirmed before payment.</p></article>
+      <article id="refund"><h2>Refund / Cancellation Policy</h2><p>Refunds and cancellations are subject to the rules of the relevant airline, railway, bus operator, hotel or service provider. Any applicable cancellation fees will be communicated before processing where possible.</p></article>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div><strong>AS Tour & Travels</strong><p>Travel booking and enquiry services.</p></div>
+    <div class="footer-links">
+      <a href="#privacy">Privacy Policy</a>
+      <a href="#terms">Terms & Conditions</a>
+      <a href="#refund">Refund/Cancellation</a>
+    </div>
+  </div>
+  <p class="copyright">© <span id="year"></span> AS Tour & Travels. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
