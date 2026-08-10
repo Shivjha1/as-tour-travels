@@ -3,231 +3,177 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AS Tour & Travels | Travel Booking</title>
-  <meta name="description" content="Book train, flight, bus, hotel, cab and tour services with AS Tour & Travels.">
+  <meta name="description" content="AS Tour & Travels - train, flight, bus, hotel, cab and tour package booking assistance.">
+  <title>AS Tour & Travels | Book Your Journey</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header class="site-header" id="top">
+    <a class="brand" href="#home" aria-label="AS Tour & Travels home">
+      <span class="brand-logo"><img src="man-logo.jpg" alt="AS Tour & Travels"></span>
+      <span><strong>AS TOUR & TRAVELS</strong><small>Your Journey, Our Care</small></span>
+    </a>
 
-<header class="site-header">
-  <div class="container nav">
-    <a class="brand" href="#home">AS Tour & Travels</a>
-    <button class="menu-toggle" aria-label="Open menu">☰</button>
-    <nav id="mainNav">
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+
+    <nav class="nav-links" aria-label="Main navigation">
       <a href="#home">Home</a>
-      <a href="#services">Services</a>
+      <a href="#services">Our Services</a>
       <a href="#packages">Tour Packages</a>
       <a href="#train-booking">Train Booking</a>
       <a href="#why-us">Why Choose Us</a>
-      <a href="#about">About</a>
+      <a href="#about">About Us</a>
       <a href="#contact">Contact</a>
     </nav>
-  </div>
-</header>
+  </header>
 
-<main>
-  <section id="home" class="hero">
-    <div class="container hero-content">
-      <div>
-        <p class="eyebrow">TRAVEL • BOOKING • SUPPORT</p>
-        <h1>Book Your Journey With Us</h1>
-        <p class="hero-text">Simple travel enquiries for trains, flights, buses, hotels, cabs and tour packages.</p>
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-overlay"></div>
+      <div class="hero-content reveal">
+        <p class="eyebrow">TRAVEL • TICKETS • TOURS</p>
+        <h1><span>Book Your</span> Journey With Us</h1>
+        <p class="hero-text">Train, flight, bus, hotel, cab and tour assistance — simple, responsive and transparent.</p>
         <div class="hero-actions">
-          <a class="btn primary" href="#train-booking">Book Now</a>
-          <a class="btn whatsapp" id="heroWhatsApp" href="#" target="_blank" rel="noopener">WhatsApp Us</a>
+          <a class="btn btn-primary" href="#train-booking">Book Now</a>
+          <a class="btn btn-whatsapp" id="whatsappHero" href="#" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+        <div class="trust-row">
+          <span>✓ Easy booking</span>
+          <span>✓ Quick response</span>
+          <span>✓ Transparent pricing</span>
         </div>
       </div>
-      <div class="hero-card">
-        <div class="hero-logo">AS</div>
-        <h2>AS Tour & Travels</h2>
-        <p>Quick response • Easy booking • Customer support</p>
-      </div>
-    </div>
-  </section>
+      <a class="scroll-cue" href="#services" aria-label="Scroll to services">↓</a>
+    </section>
 
-  <section id="services" class="section">
-    <div class="container">
-      <div class="section-heading">
-        <p class="eyebrow">WHAT WE OFFER</p>
-        <h2>Our Services</h2>
+    <section class="section" id="services">
+      <div class="section-heading reveal">
+        <p class="eyebrow">WHAT WE DO</p>
+        <h2>Everything You Need for Your Journey</h2>
+        <p>Choose a service and send us your requirement. We will respond with the available options and pricing.</p>
       </div>
-      <div class="cards services-grid">
-        <article class="card"><span>🚆</span><h3>Train Ticket Booking</h3><p>Send your journey details for a booking enquiry.</p></article>
-        <article class="card"><span>✈️</span><h3>Flight Booking</h3><p>Flight booking assistance and enquiries.</p></article>
-        <article class="card"><span>🚌</span><h3>Bus Booking</h3><p>Bus travel booking assistance.</p></article>
-        <article class="card"><span>🏨</span><h3>Hotel Booking</h3><p>Hotel stay enquiries and booking assistance.</p></article>
-        <article class="card"><span>🚕</span><h3>Cab / Taxi</h3><p>Local and travel cab enquiries.</p></article>
-        <article class="card"><span>🧳</span><h3>Tour Packages</h3><p>Ask about available destinations and packages.</p></article>
-        <article class="card"><span>📄</span><h3>Passport / Visa Assistance</h3><p>Available only where this service is provided.</p></article>
+      <div class="service-grid">
+        <article class="service-card reveal"><span class="service-icon">🚆</span><h3>Train Ticket Booking</h3><p>Share your route, date and passenger details for booking assistance.</p><a href="#train-booking">Enquire →</a></article>
+        <article class="service-card reveal"><span class="service-icon">✈️</span><h3>Flight Booking</h3><p>Flight search and booking assistance for your preferred travel dates.</p><a href="#contact">Enquire →</a></article>
+        <article class="service-card reveal"><span class="service-icon">🚌</span><h3>Bus Booking</h3><p>Bus travel assistance for suitable routes and schedules.</p><a href="#contact">Enquire →</a></article>
+        <article class="service-card reveal"><span class="service-icon">🏨</span><h3>Hotel Booking</h3><p>Hotel booking assistance based on destination and budget.</p><a href="#contact">Enquire →</a></article>
+        <article class="service-card reveal"><span class="service-icon">🚕</span><h3>Cab / Taxi</h3><p>Local and outstation cab assistance for your travel plans.</p><a href="#contact">Enquire →</a></article>
+        <article class="service-card reveal"><span class="service-icon">🧳</span><h3>Tour Packages</h3><p>Custom trips with destination, duration and budget options.</p><a href="#packages">View packages →</a></article>
+        <article class="service-card reveal"><span class="service-icon">📄</span><h3>Passport / Visa Assistance</h3><p>Documentation assistance where this service is available.</p><a href="#contact">Ask us →</a></article>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="packages" class="section alt">
-    <div class="container">
-      <div class="section-heading">
-        <p class="eyebrow">TRAVEL IDEAS</p>
+    <section class="section section-soft" id="packages">
+      <div class="section-heading reveal">
+        <p class="eyebrow">EXPLORE</p>
         <h2>Tour Packages</h2>
+        <p>Sample package cards — ask us for current destinations, dates and prices.</p>
       </div>
-      <div class="cards package-grid">
-        <article class="card package">
-          <h3>Custom Tour</h3>
-          <p><strong>Destination:</strong> Choose your destination</p>
-          <p><strong>Days:</strong> Flexible</p>
-          <p><strong>Starting price:</strong> Contact us</p>
-          <p><strong>Included:</strong> Package details provided on enquiry.</p>
-          <a class="text-btn package-enquire" href="#">Enquire Now →</a>
-        </article>
-        <article class="card package">
-          <h3>Family / Group Tour</h3>
-          <p><strong>Destination:</strong> As requested</p>
-          <p><strong>Days:</strong> Flexible</p>
-          <p><strong>Starting price:</strong> Contact us</p>
-          <p><strong>Included:</strong> Itinerary and inclusions on enquiry.</p>
-          <a class="text-btn package-enquire" href="#">Enquire Now →</a>
-        </article>
-        <article class="card package">
-          <h3>Weekend Trip</h3>
-          <p><strong>Destination:</strong> Ask for available options</p>
-          <p><strong>Days:</strong> 2–3 days</p>
-          <p><strong>Starting price:</strong> Contact us</p>
-          <p><strong>Included:</strong> Details provided before booking.</p>
-          <a class="text-btn package-enquire" href="#">Enquire Now →</a>
-        </article>
+      <div class="package-grid">
+        <article class="package-card reveal"><div class="package-image package-1"></div><div class="package-body"><span>Popular</span><h3>Darjeeling Escape</h3><p>4 Days / 3 Nights</p><strong>Starting price: Ask us</strong><a href="#contact" class="text-link">Enquire Now →</a></div></article>
+        <article class="package-card reveal"><div class="package-image package-2"></div><div class="package-body"><span>Family</span><h3>Goa Holiday</h3><p>5 Days / 4 Nights</p><strong>Starting price: Ask us</strong><a href="#contact" class="text-link">Enquire Now →</a></div></article>
+        <article class="package-card reveal"><div class="package-image package-3"></div><div class="package-body"><span>Heritage</span><h3>Rajasthan Tour</h3><p>6 Days / 5 Nights</p><strong>Starting price: Ask us</strong><a href="#contact" class="text-link">Enquire Now →</a></div></article>
       </div>
-    </div>
-  </section>
+      <p class="small-note">Package availability, inclusions and prices can change. Confirm the final details before payment.</p>
+    </section>
 
-  <section id="train-booking" class="section">
-    <div class="container booking-layout">
-      <div class="section-heading">
-        <p class="eyebrow">TRAIN ENQUIRY</p>
-        <h2>Train Ticket Booking</h2>
-        <p>Submit your journey details and we'll send the enquiry to WhatsApp and your connected Google Sheet.</p>
-        <div class="notice">Ticket confirmation depends on availability and applicable booking rules. No 100% confirmation guarantee is made.</div>
-      </div>
-
-      <form id="bookingForm" class="booking-form">
-        <div class="form-row">
-          <label>From
-            <input id="from" name="from" required placeholder="Departure station">
-          </label>
-          <label>To
-            <input id="to" name="to" required placeholder="Destination station">
-          </label>
+    <section class="section" id="train-booking">
+      <div class="booking-wrap reveal">
+        <div class="booking-intro">
+          <p class="eyebrow">TRAIN ASSISTANCE</p>
+          <h2>Send Your Train Booking Request</h2>
+          <p>Fill in the details below. Your request is sent to the connected Google Apps Script endpoint for processing.</p>
+          <div class="booking-points"><p>✓ From / To</p><p>✓ Journey date</p><p>✓ Passenger details</p><p>✓ Class preference</p></div>
         </div>
-
-        <div class="form-row">
-          <label>Journey date
-            <input id="date" name="date" type="date" required>
-          </label>
+        <form id="bookingForm" class="booking-form">
+          <label>From<input name="from" required placeholder="e.g. Darbhanga"></label>
+          <label>To<input name="to" required placeholder="e.g. New Delhi"></label>
+          <label>Journey date<input type="date" name="journeyDate" required></label>
+          <label>Passengers<input type="number" name="passengers" min="1" max="20" value="1" required></label>
+          <label>Passenger name<input name="passengerName" required placeholder="Full name"></label>
           <label>Class preference
-            <select id="className" name="className" required>
-              <option value="">Select class</option>
-              <option>General</option>
-              <option>Sleeper (SL)</option>
-              <option>AC 3 Tier (3A)</option>
-              <option>AC 2 Tier (2A)</option>
-              <option>AC First Class (1A)</option>
-              <option>Chair Car (CC)</option>
-              <option>Executive Chair Car (EC)</option>
+            <select name="classPreference">
+              <option>Sleeper</option><option>3A</option><option>2A</option><option>1A</option><option>CC</option><option>Any available</option>
             </select>
           </label>
-        </div>
+          <label class="full">Phone / WhatsApp<input name="phone" required placeholder="Your contact number"></label>
+          <label class="full">Message<textarea name="message" rows="3" placeholder="Any additional requirement"></textarea></label>
+          <button class="btn btn-primary full" type="submit">Submit Booking Enquiry</button>
+          <p id="formStatus" class="form-status" role="status"></p>
+          <p class="small-note full">Submitting a request does not mean a ticket is confirmed. Final confirmation depends on availability and applicable booking rules.</p>
+        </form>
+      </div>
+    </section>
 
-        <div class="form-row">
-          <label>Passenger details
-            <input id="passengers" name="passengers" type="number" min="1" max="20" required placeholder="Number of passengers">
-          </label>
-          <label>Phone / WhatsApp
-            <input id="customerPhone" name="customerPhone" type="tel" required placeholder="Your phone number">
-          </label>
-        </div>
-
-        <button class="btn primary full" type="submit">Send Booking Enquiry</button>
-        <p id="formStatus" class="form-status" aria-live="polite"></p>
-      </form>
-    </div>
-  </section>
-
-  <section id="why-us" class="section dark">
-    <div class="container">
-      <div class="section-heading light">
+    <section class="section why-section" id="why-us">
+      <div class="section-heading reveal">
         <p class="eyebrow">WHY US</p>
-        <h2>Why Choose Us</h2>
+        <h2>Why Choose AS Tour & Travels?</h2>
       </div>
       <div class="why-grid">
-        <div><b>✓ Easy booking</b><span>Simple enquiry process.</span></div>
-        <div><b>✓ Quick response</b><span>We aim to respond promptly.</span></div>
-        <div><b>✓ Transparent pricing</b><span>Pricing and inclusions explained before booking.</span></div>
-        <div><b>✓ Customer support</b><span>Help with your travel enquiry.</span></div>
+        <div class="why-item reveal"><b>01</b><h3>Easy Booking</h3><p>Simple enquiry forms and direct communication.</p></div>
+        <div class="why-item reveal"><b>02</b><h3>Quick Response</h3><p>We aim to respond promptly to your travel request.</p></div>
+        <div class="why-item reveal"><b>03</b><h3>Transparent Pricing</h3><p>We explain applicable prices, fees and booking conditions before proceeding.</p></div>
+        <div class="why-item reveal"><b>04</b><h3>Customer Support</h3><p>Contact us for assistance before and after your booking enquiry.</p></div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="about" class="section">
-    <div class="container about">
-      <div>
+    <section class="section about" id="about">
+      <div class="about-copy reveal">
         <p class="eyebrow">ABOUT US</p>
-        <h2>AS Tour & Travels</h2>
-        <p>We help customers with travel booking enquiries and travel-related services. Contact us for availability, pricing and booking assistance.</p>
-      </div>
-      <div class="info-box about-info">
-        <p><strong>Location:</strong> Adhloam, Darbhanga, Bihar - 847201</p>
-        <p><strong>Phone:</strong> <a href="tel:+918298500120">+91 82985 00120</a></p>
-        <p><strong>Email:</strong> <a href="mailto:jharaja538@gmail.com">jharaja538@gmail.com</a></p>
-        <p><strong>Address:</strong><br>
-          आत्मजः पवन झा, विद्यालय के पास, ग्राम लहरपुर पोस्ट अधलोआम थाना बहेरा,<br>
-          अधलोआम, दरभंगा, बिहार - 847201
-        </p>
-        <p><strong>Address (English):</strong><br>
-          S/O: Pawan Jha, Near School, Vill Laharpur Post Adhloma Thana Bahera,<br>
-          Adhloam, Darbhanga, Bihar - 847201
-        </p>
-        <div class="about-photo">
-          <img src="man-photo.jpg" alt="AS Tour & Travels representative">
+        <h2>Travel planning with a personal touch.</h2>
+        <p>AS Tour & Travels provides travel booking and enquiry assistance for train, flight, bus, hotel, cab and tour requirements.</p>
+        <p>We focus on clear communication, practical options and customer support.</p>
+        <div class="address-box">
+          <strong>Office / Contact Address</strong>
+          <p>आत्मजः पवन झा, विद्यालय के पास, ग्राम लहरपुर पोस्ट अधलोआम थाना बहेरा, अधलोआम, दरभंगा, बिहार - 847201</p>
+          <p>S/O: Pawan Jha, Near School, Vill Laharpur Post Adhloma Thana Bahera, Adhloam, Darbhanga, Bihar-847201</p>
         </div>
       </div>
-    </div>
-  </section>
+      <div class="about-photo reveal">
+        <img src="man-photo.jpg" alt="AS Tour & Travels representative">
+        <div class="photo-caption">AS Tour & Travels</div>
+      </div>
+    </section>
 
-  <section id="contact" class="section alt">
-    <div class="container">
-      <div class="section-heading">
+    <section class="section contact-section" id="contact">
+      <div class="section-heading reveal">
         <p class="eyebrow">GET IN TOUCH</p>
-        <h2>Contact</h2>
+        <h2>Let's Plan Your Next Journey</h2>
+        <p>For booking assistance, send your travel details by WhatsApp or email.</p>
       </div>
       <div class="contact-grid">
-        <a class="contact-card" id="contactWhatsApp" href="#" target="_blank" rel="noopener"><span>💬</span><b>WhatsApp</b><small>Chat with us</small></a>
-        <a class="contact-card" href="tel:+918298500120"><span>📞</span><b>Phone</b><small>+91 82985 00120</small></a>
-        <a class="contact-card" href="mailto:jharaja538@gmail.com"><span>✉️</span><b>Email</b><small>jharaja538@gmail.com</small></a>
-        <div class="contact-card"><span>📍</span><b>Address</b><small>S/O: Pawan Jha, Near School, Vill Laharpur Post Adhloma Thana Bahera, Adhloam, Darbhanga, Bihar - 847201</small></div>
+        <a class="contact-card reveal" href="mailto:jharaja538@gmail.com"><span>✉️</span><div><small>Email</small><strong>jharaja538@gmail.com</strong></div></a>
+        <a class="contact-card reveal" id="whatsappContact" href="#" target="_blank" rel="noopener"><span>💬</span><div><small>WhatsApp</small><strong>Start a WhatsApp enquiry</strong></div></a>
+        <div class="contact-card reveal"><span>📍</span><div><small>Address</small><strong>Adhloam, Darbhanga, Bihar - 847201</strong></div></div>
       </div>
-      <div class="map-placeholder">Google Maps location — replace this area with your Google Maps embed.</div>
-    </div>
-  </section>
+      <div class="map-note reveal"><span>📍</span><div><strong>Google Maps</strong><p>Use the address above to locate the office. Add your exact Google Maps link here when available.</p></div></div>
+    </section>
+  </main>
 
-  <section class="legal section">
-    <div class="container legal-grid">
-      <article id="privacy"><h2>Privacy Policy</h2><p>We use information submitted through this website only to respond to travel enquiries and provide requested services. Do not submit passwords, payment PINs or unnecessary sensitive information.</p></article>
-      <article id="terms"><h2>Terms & Conditions</h2><p>Availability, fares, schedules, hotel rates and service conditions can change. Bookings are subject to provider rules and applicable charges. Information and prices should be confirmed before payment.</p></article>
-      <article id="refund"><h2>Refund / Cancellation Policy</h2><p>Refunds and cancellations are subject to the rules of the relevant airline, railway, bus operator, hotel or service provider. Any applicable cancellation fees will be communicated before processing where possible.</p></article>
+  <footer class="footer">
+    <div class="footer-inner">
+      <div><strong>AS TOUR & TRAVELS</strong><p>Book your journey with us.</p></div>
+      <div class="footer-links">
+        <a href="#privacy">Privacy Policy</a>
+        <a href="#terms">Terms & Conditions</a>
+        <a href="#refund">Refund / Cancellation Policy</a>
+      
+      </div>
     </div>
-  </section>
-</main>
+    <div class="footer-bottom">© <span id="year"></span> AS Tour & Travels. All rights reserved.</div>
+  </footer>
 
-<footer class="footer">
-  <div class="container footer-inner">
-    <div><strong>AS Tour & Travels</strong><p>Travel booking and enquiry services.</p></div>
-    <div class="footer-links">
-      <a href="#privacy">Privacy Policy</a>
-      <a href="#terms">Terms & Conditions</a>
-      <a href="#refund">Refund/Cancellation</a>
-    </div>
-  </div>
-  <p class="copyright">© <span id="year"></span> AS Tour & Travels. All rights reserved.</p>
-</footer>
+  <dialog id="policyDialog">
+    <button class="dialog-close" aria-label="Close">×</button>
+    <h2 id="policyTitle"></h2>
+    <div id="policyText"></div>
+  </dialog>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
