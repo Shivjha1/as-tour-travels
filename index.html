@@ -1,179 +1,418 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="AS Tour & Travels - train, flight, bus, hotel, cab and tour package booking assistance.">
-  <title>AS Tour & Travels | Book Your Journey</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AS Tour and Travels — Book Your Journey With Us</title>
+<meta name="description" content="AS Tour and Travels, Darbhanga — Train, Flight, Bus, Hotel booking, Cab/Taxi, Tour Packages & Passport/Visa assistance. Enquire directly on WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Teko:wght@500;600;700&family=Hind:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<noscript><style>.reveal{opacity:1 !important;transform:none !important;}</style></noscript>
 </head>
 <body>
-  <header class="site-header" id="top">
-    <a class="brand" href="#home" aria-label="AS Tour & Travels home">
-      <span class="brand-logo"><img src="man-logo.jpg" alt="AS Tour & Travels"></span>
-      <span><strong>AS TOUR & TRAVELS</strong><small>Your Journey, Our Care</small></span>
+
+<!-- ============================== NAV ============================== -->
+<header class="nav">
+  <div class="container">
+    <a href="#home" class="brand">
+      <span class="brand-mark">AS</span>
+      <span class="brand-name">Tour and Travels</span>
     </a>
-
-    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
-
-    <nav class="nav-links" aria-label="Main navigation">
-      <a href="#home">Home</a>
-      <a href="#services">Our Services</a>
-      <a href="#packages">Tour Packages</a>
-      <a href="#train-booking">Train Booking</a>
-      <a href="#why-us">Why Choose Us</a>
-      <a href="#about">About Us</a>
+    <nav class="nav-links" id="nav-links">
+      <a href="#services">Services</a>
+      <a href="#packages">Packages</a>
+      <a href="#train">Train Booking</a>
+      <a href="#why-us">Why Us</a>
+      <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </nav>
-  </header>
+    <div class="nav-cta">
+      <a class="btn btn-outline" href="tel:+918298500120">Call</a>
+      <a class="btn btn-primary" href="https://wa.me/918298500120?text=Namaste%20AS%20Tour%20and%20Travels%2C%20mujhe%20booking%20ke%20baare%20mein%20jaankari%20chahiye." target="_blank" rel="noopener">Book Now</a>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false">☰</button>
+  </div>
+</header>
 
-  <main>
-    <section class="hero" id="home">
-      <div class="hero-overlay"></div>
-      <div class="hero-content reveal">
-        <p class="eyebrow">TRAVEL • TICKETS • TOURS</p>
-        <h1><span>Book Your</span> Journey With Us</h1>
-        <p class="hero-text">Train, flight, bus, hotel, cab and tour assistance — simple, responsive and transparent.</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#train-booking">Book Now</a>
-          <a class="btn btn-whatsapp" id="whatsappHero" href="#" target="_blank" rel="noopener">WhatsApp</a>
+<!-- ============================== HERO ============================== -->
+<section class="hero" id="home">
+  <div class="container">
+    <p class="hero-tag">🚆 Train &nbsp;·&nbsp; ✈️ Flight &nbsp;·&nbsp; 🚌 Bus &nbsp;·&nbsp; 🏨 Hotel</p>
+    <h1>Book Your <span class="accent">Journey</span><br>With Us</h1>
+    <p class="hero-sub">
+      Train, flight, bus &amp; hotel booking, cab service, tour packages and passport/visa assistance — all under one roof in Darbhanga.
+      <span class="hi">एक ही जगह टिकट बुकिंग और यात्रा से जुड़ी हर सहायता।</span>
+    </p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="https://wa.me/918298500120?text=Namaste%20AS%20Tour%20and%20Travels%2C%20mujhe%20apni%20journey%20book%20karni%20hai.%20Please%20help." target="_blank" rel="noopener">Book Now →</a>
+      <a class="btn btn-whatsapp" href="https://wa.me/918298500120?text=Namaste%2C%20mujhe%20booking%20ke%20baare%20mein%20jaankari%20chahiye." target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.6-.8-1.9-.9-.2-.1-.4-.1-.6.1-.2.3-.7.9-.8 1-.2.2-.3.2-.5.1-.3-.1-1.2-.4-2.3-1.4-.8-.7-1.4-1.6-1.6-1.9-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.4.1-.2 0-.3 0-.5C11.5 9.9 11 8.7 10.8 8.2c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.1 0 1.2.9 2.4 1 2.6.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.6-.6 1.8-1.3.2-.6.2-1.2.2-1.3-.1-.1-.2-.2-.5-.3zM12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.6 1.5 5.2L2 22l4.9-1.3C8.4 21.5 10.1 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+        WhatsApp
+      </a>
+    </div>
+
+    <div class="route" aria-hidden="true">
+      <svg class="route-svg" viewBox="0 0 900 150" xmlns="http://www.w3.org/2000/svg">
+        <path class="route-line" d="M20,40 C160,40 160,110 300,110 C440,110 440,40 580,40 C720,40 720,110 860,110" />
+        <path class="route-line-progress" d="M20,40 C160,40 160,110 300,110 C440,110 440,40 580,40 C720,40 720,110 860,110" />
+
+        <g class="route-node">
+          <circle cx="20" cy="40" r="17"></circle>
+          <text x="20" y="47" text-anchor="middle" class="emoji">🚌</text>
+          <text x="20" y="76" text-anchor="middle">Bus</text>
+        </g>
+        <g class="route-node">
+          <circle cx="300" cy="110" r="17"></circle>
+          <text x="300" y="117" text-anchor="middle" class="emoji">🚆</text>
+          <text x="300" y="146" text-anchor="middle">Train</text>
+        </g>
+        <g class="route-node">
+          <circle cx="580" cy="40" r="17"></circle>
+          <text x="580" y="47" text-anchor="middle" class="emoji">✈️</text>
+          <text x="580" y="76" text-anchor="middle">Flight</text>
+        </g>
+        <g class="route-node">
+          <circle cx="860" cy="110" r="17"></circle>
+          <text x="860" y="117" text-anchor="middle" class="emoji">🏨</text>
+          <text x="860" y="146" text-anchor="middle">Hotel</text>
+        </g>
+
+        <circle class="route-dot" r="6">
+          <animateMotion dur="3.2s" repeatCount="indefinite"
+            path="M20,40 C160,40 160,110 300,110 C440,110 440,40 580,40 C720,40 720,110 860,110" />
+        </circle>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== SERVICES ============================== -->
+<section id="services">
+  <div class="container">
+    <span class="eyebrow">Our Services</span>
+    <h2>Everything For Your Trip</h2>
+
+    <div class="services-grid">
+
+      <div class="ticket service-card reveal">
+        <span class="service-icon">🚆</span>
+        <h3>Train Ticket Booking</h3>
+        <p>Reserved &amp; tatkal ticket booking assistance for all classes and routes.</p>
+        <a class="service-link" target="_blank" rel="noopener" href="https://wa.me/918298500120?text=Namaste%2C%20mujhe%20Train%20Ticket%20Booking%20ke%20baare%20mein%20jaankari%20chahiye.">Enquire on WhatsApp →</a>
+      </div>
+
+      <div class="ticket service-card reveal">
+        <span class="service-icon">✈️</span>
+        <h3>Flight Booking</h3>
+        <p>Domestic &amp; international flight booking at competitive fares.</p>
+        <a class="service-link" target="_blank" rel="noopener" href="https://wa.me/918298500120?text=Namaste%2C%20mujhe%20Flight%20Booking%20ke%20baare%20mein%20jaankari%20chahiye.">Enquire on WhatsApp →</a>
+      </div>
+
+      <div class="ticket service-card reveal">
+        <span class="service-icon">🚌</span>
+        <h3>Bus Booking</h3>
+        <p>AC/Non-AC sleeper &amp; seater bus tickets for major routes.</p>
+        <a class="service-link" target="_blank" rel="noopener" href="https://wa.me/918298500120?text=Namaste%2C%20mujhe%20Bus%20Booking%20ke%20baare%20mein%20jaankari%20chahiye.">Enquire on WhatsApp →</a>
+      </div>
+
+      <div class="ticket service-card reveal">
+        <span class="service-icon">🏨</span>
+        <h3>Hotel Booking</h3>
+        <p>Budget to premium hotel booking at your destination city.</p>
+        <a class="service-link" target="_blank" rel="noopener" href="https://wa.me/918298500120?text=Namaste%2C%20mujhe%20Hotel%20Booking%20ke%20baare%20mein%20jaankari%20chahiye.">Enquire on WhatsApp →</a>
+      </div>
+
+      <div class="ticket service-card reveal">
+        <span class="service-icon">🚕</span>
+        <h3>Cab / Taxi</h3>
+        <p>Local &amp; outstation cab booking, airport pickup and drop.</p>
+        <a class="service-link" target="_blank" rel="noopener" href="https://wa.me/918298500120?text=Namaste%2C%20mujhe%20Cab%2FTaxi%20booking%20ke%20baare%20mein%20jaankari%20chahiye.">Enquire on WhatsApp →</a>
+      </div>
+
+      <div class="ticket service-card reveal">
+        <span class="service-icon">🧳</span>
+        <h3>Tour Packages</h3>
+        <p>Pilgrimage &amp; holiday packages, fully planned with stay and transport.</p>
+        <a class="service-link" target="_blank" rel="noopener" href="https://wa.me/918298500120?text=Namaste%2C%20mujhe%20Tour%20Packages%20ke%20baare%20mein%20jaankari%20chahiye.">Enquire on WhatsApp →</a>
+      </div>
+
+      <div class="ticket service-card reveal">
+        <span class="service-icon">📄</span>
+        <h3>Passport / Visa Assistance</h3>
+        <p>Guidance and document support for passport &amp; visa applications.</p>
+        <a class="service-link" target="_blank" rel="noopener" href="https://wa.me/918298500120?text=Namaste%2C%20mujhe%20Passport%2FVisa%20assistance%20ke%20baare%20mein%20jaankari%20chahiye.">Enquire on WhatsApp →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================== PACKAGES ============================== -->
+<section id="packages" class="section-dark perforated-top perforated-bottom">
+  <div class="container">
+    <span class="eyebrow">Tour Packages</span>
+    <h2>Popular Journeys</h2>
+    <p style="max-width:56ch">Sample packages below — write to us on WhatsApp for the latest price, seats and dates for your travel month.</p>
+
+    <!-- NOTE for site owner: destinations / days / prices below are placeholders — please update with your real, current package details before publishing. -->
+    <div class="packages-grid">
+
+      <div class="ticket package-card reveal">
+        <div class="package-head">
+          <span class="package-days">4 Days / 3 Nights</span>
+          <h3>Vaishno Devi Yatra</h3>
         </div>
-        <div class="trust-row">
-          <span>✓ Easy booking</span>
-          <span>✓ Quick response</span>
-          <span>✓ Transparent pricing</span>
+        <div class="package-body">
+          <p class="package-price">₹6,999<span> onwards / person*</span></p>
+          <ul class="package-includes">
+            <li>Hotel stay near base camp</li>
+            <li>Breakfast &amp; dinner</li>
+            <li>AC transport from Darbhanga</li>
+            <li>Yatra guide support</li>
+          </ul>
+          <a class="btn btn-primary btn-block" target="_blank" rel="noopener" href="https://wa.me/918298500120?text=Namaste%2C%20mujhe%20Vaishno%20Devi%20Yatra%20package%20ke%20baare%20mein%20jaankari%20chahiye.">Enquire Now</a>
         </div>
       </div>
-      <a class="scroll-cue" href="#services" aria-label="Scroll to services">↓</a>
-    </section>
 
-    <section class="section" id="services">
-      <div class="section-heading reveal">
-        <p class="eyebrow">WHAT WE DO</p>
-        <h2>Everything You Need for Your Journey</h2>
-        <p>Choose a service and send us your requirement. We will respond with the available options and pricing.</p>
-      </div>
-      <div class="service-grid">
-        <article class="service-card reveal"><span class="service-icon">🚆</span><h3>Train Ticket Booking</h3><p>Share your route, date and passenger details for booking assistance.</p><a href="#train-booking">Enquire →</a></article>
-        <article class="service-card reveal"><span class="service-icon">✈️</span><h3>Flight Booking</h3><p>Flight search and booking assistance for your preferred travel dates.</p><a href="#contact">Enquire →</a></article>
-        <article class="service-card reveal"><span class="service-icon">🚌</span><h3>Bus Booking</h3><p>Bus travel assistance for suitable routes and schedules.</p><a href="#contact">Enquire →</a></article>
-        <article class="service-card reveal"><span class="service-icon">🏨</span><h3>Hotel Booking</h3><p>Hotel booking assistance based on destination and budget.</p><a href="#contact">Enquire →</a></article>
-        <article class="service-card reveal"><span class="service-icon">🚕</span><h3>Cab / Taxi</h3><p>Local and outstation cab assistance for your travel plans.</p><a href="#contact">Enquire →</a></article>
-        <article class="service-card reveal"><span class="service-icon">🧳</span><h3>Tour Packages</h3><p>Custom trips with destination, duration and budget options.</p><a href="#packages">View packages →</a></article>
-        <article class="service-card reveal"><span class="service-icon">📄</span><h3>Passport / Visa Assistance</h3><p>Documentation assistance where this service is available.</p><a href="#contact">Ask us →</a></article>
-      </div>
-    </section>
-
-    <section class="section section-soft" id="packages">
-      <div class="section-heading reveal">
-        <p class="eyebrow">EXPLORE</p>
-        <h2>Tour Packages</h2>
-        <p>Sample package cards — ask us for current destinations, dates and prices.</p>
-      </div>
-      <div class="package-grid">
-        <article class="package-card reveal"><div class="package-image package-1"></div><div class="package-body"><span>Popular</span><h3>Darjeeling Escape</h3><p>4 Days / 3 Nights</p><strong>Starting price: Ask us</strong><a href="#contact" class="text-link">Enquire Now →</a></div></article>
-        <article class="package-card reveal"><div class="package-image package-2"></div><div class="package-body"><span>Family</span><h3>Goa Holiday</h3><p>5 Days / 4 Nights</p><strong>Starting price: Ask us</strong><a href="#contact" class="text-link">Enquire Now →</a></div></article>
-        <article class="package-card reveal"><div class="package-image package-3"></div><div class="package-body"><span>Heritage</span><h3>Rajasthan Tour</h3><p>6 Days / 5 Nights</p><strong>Starting price: Ask us</strong><a href="#contact" class="text-link">Enquire Now →</a></div></article>
-      </div>
-      <p class="small-note">Package availability, inclusions and prices can change. Confirm the final details before payment.</p>
-    </section>
-
-    <section class="section" id="train-booking">
-      <div class="booking-wrap reveal">
-        <div class="booking-intro">
-          <p class="eyebrow">TRAIN ASSISTANCE</p>
-          <h2>Send Your Train Booking Request</h2>
-          <p>Fill in the details below. Your request is sent to the connected Google Apps Script endpoint for processing.</p>
-          <div class="booking-points"><p>✓ From / To</p><p>✓ Journey date</p><p>✓ Passenger details</p><p>✓ Class preference</p></div>
+      <div class="ticket package-card reveal">
+        <div class="package-head">
+          <span class="package-days">5 Days / 4 Nights</span>
+          <h3>Puri Jagannath Darshan</h3>
         </div>
-        <form id="bookingForm" class="booking-form">
-          <label>From<input name="from" required placeholder="e.g. Darbhanga"></label>
-          <label>To<input name="to" required placeholder="e.g. New Delhi"></label>
-          <label>Journey date<input type="date" name="journeyDate" required></label>
-          <label>Passengers<input type="number" name="passengers" min="1" max="20" value="1" required></label>
-          <label>Passenger name<input name="passengerName" required placeholder="Full name"></label>
-          <label>Class preference
-            <select name="classPreference">
-              <option>Sleeper</option><option>3A</option><option>2A</option><option>1A</option><option>CC</option><option>Any available</option>
+        <div class="package-body">
+          <p class="package-price">₹8,499<span> onwards / person*</span></p>
+          <ul class="package-includes">
+            <li>Hotel stay near Jagannath temple</li>
+            <li>Daily breakfast</li>
+            <li>AC transport &amp; sightseeing</li>
+            <li>Temple darshan assistance</li>
+          </ul>
+          <a class="btn btn-primary btn-block" target="_blank" rel="noopener" href="https://wa.me/918298500120?text=Namaste%2C%20mujhe%20Puri%20Jagannath%20Darshan%20package%20ke%20baare%20mein%20jaankari%20chahiye.">Enquire Now</a>
+        </div>
+      </div>
+
+      <div class="ticket package-card reveal">
+        <div class="package-head">
+          <span class="package-days">4 Days / 3 Nights</span>
+          <h3>Nepal Darshan — Janakpur &amp; Pashupatinath</h3>
+        </div>
+        <div class="package-body">
+          <p class="package-price">₹9,999<span> onwards / person*</span></p>
+          <ul class="package-includes">
+            <li>Hotel stay, daily breakfast</li>
+            <li>Private transport, border assistance</li>
+            <li>Janakpur, Pashupatinath &amp; Muktinath darshan</li>
+          </ul>
+          <a class="btn btn-primary btn-block" target="_blank" rel="noopener" href="https://wa.me/918298500120?text=Namaste%2C%20mujhe%20Nepal%20Darshan%20package%20ke%20baare%20mein%20jaankari%20chahiye.">Enquire Now</a>
+        </div>
+      </div>
+
+      <div class="ticket package-card reveal">
+        <div class="package-head">
+          <span class="package-days">4 Days / 3 Nights</span>
+          <h3>Goa Beach Holiday</h3>
+        </div>
+        <div class="package-body">
+          <p class="package-price">₹11,999<span> onwards / person*</span></p>
+          <ul class="package-includes">
+            <li>Hotel stay, daily breakfast</li>
+            <li>Airport pickup &amp; drop</li>
+            <li>North &amp; South Goa sightseeing</li>
+          </ul>
+          <a class="btn btn-primary btn-block" target="_blank" rel="noopener" href="https://wa.me/918298500120?text=Namaste%2C%20mujhe%20Goa%20Beach%20Holiday%20package%20ke%20baare%20mein%20jaankari%20chahiye.">Enquire Now</a>
+        </div>
+      </div>
+
+    </div>
+    <p style="margin-top:1.6rem;font-size:0.82rem;color:rgba(236,238,230,0.55)">*Price is indicative, per person on twin sharing, and varies with season, availability &amp; departure city. Confirm final price on WhatsApp before booking.</p>
+  </div>
+</section>
+
+<!-- ============================== TRAIN BOOKING ============================== -->
+<section id="train">
+  <div class="container">
+    <span class="eyebrow">Train Ticket Booking</span>
+    <h2>Send Us Your Travel Details</h2>
+    <p style="max-width:56ch">Fill this out and it opens WhatsApp with your details ready to send — no waiting on hold.</p>
+
+    <div class="counter reveal">
+      <form class="counter-form" id="train-form">
+        <div class="form-row">
+          <div class="field">
+            <label for="from">From</label>
+            <input type="text" id="from" name="from" placeholder="e.g. Darbhanga" required>
+          </div>
+          <div class="field">
+            <label for="to">To</label>
+            <input type="text" id="to" name="to" placeholder="e.g. New Delhi" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label for="date">Journey Date</label>
+            <input type="date" id="date" name="date" required>
+          </div>
+          <div class="field">
+            <label for="passengers">Passengers</label>
+            <input type="number" id="passengers" name="passengers" min="1" placeholder="e.g. 2">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label for="travelClass">Class Preference</label>
+            <select id="travelClass" name="travelClass">
+              <option value="">Select class</option>
+              <option>Sleeper (SL)</option>
+              <option>AC 3 Tier (3A)</option>
+              <option>AC 2 Tier (2A)</option>
+              <option>AC First Class (1A)</option>
+              <option>AC Chair Car (CC)</option>
+              <option>General</option>
             </select>
-          </label>
-          <label class="full">Phone / WhatsApp<input name="phone" required placeholder="Your contact number"></label>
-          <label class="full">Message<textarea name="message" rows="3" placeholder="Any additional requirement"></textarea></label>
-          <button class="btn btn-primary full" type="submit">Submit Booking Enquiry</button>
-          <p id="formStatus" class="form-status" role="status"></p>
-          <p class="small-note full">Submitting a request does not mean a ticket is confirmed. Final confirmation depends on availability and applicable booking rules.</p>
-        </form>
-      </div>
-    </section>
-
-    <section class="section why-section" id="why-us">
-      <div class="section-heading reveal">
-        <p class="eyebrow">WHY US</p>
-        <h2>Why Choose AS Tour & Travels?</h2>
-      </div>
-      <div class="why-grid">
-        <div class="why-item reveal"><b>01</b><h3>Easy Booking</h3><p>Simple enquiry forms and direct communication.</p></div>
-        <div class="why-item reveal"><b>02</b><h3>Quick Response</h3><p>We aim to respond promptly to your travel request.</p></div>
-        <div class="why-item reveal"><b>03</b><h3>Transparent Pricing</h3><p>We explain applicable prices, fees and booking conditions before proceeding.</p></div>
-        <div class="why-item reveal"><b>04</b><h3>Customer Support</h3><p>Contact us for assistance before and after your booking enquiry.</p></div>
-      </div>
-    </section>
-
-    <section class="section about" id="about">
-      <div class="about-copy reveal">
-        <p class="eyebrow">ABOUT US</p>
-        <h2>Travel planning with a personal touch.</h2>
-        <p>AS Tour & Travels provides travel booking and enquiry assistance for train, flight, bus, hotel, cab and tour requirements.</p>
-        <p>We focus on clear communication, practical options and customer support.</p>
-        <div class="address-box">
-          <strong>Office / Contact Address</strong>
-          <p>आत्मजः पवन झा, विद्यालय के पास, ग्राम लहरपुर पोस्ट अधलोआम थाना बहेरा, अधलोआम, दरभंगा, बिहार - 847201</p>
-          <p>S/O: Pawan Jha, Near School, Vill Laharpur Post Adhloma Thana Bahera, Adhloam, Darbhanga, Bihar-847201</p>
+          </div>
+          <div class="field">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Full name">
+          </div>
         </div>
-      </div>
-      <div class="about-photo reveal">
-        <img src="man-photo.jpg" alt="AS Tour & Travels representative">
-        <div class="photo-caption">AS Tour & Travels</div>
-      </div>
-    </section>
+        <button type="submit" class="btn btn-whatsapp btn-block">Send Details on WhatsApp</button>
+      </form>
 
-    <section class="section contact-section" id="contact">
-      <div class="section-heading reveal">
-        <p class="eyebrow">GET IN TOUCH</p>
-        <h2>Let's Plan Your Next Journey</h2>
-        <p>For booking assistance, send your travel details by WhatsApp or email.</p>
-      </div>
-      <div class="contact-grid">
-        <a class="contact-card reveal" href="mailto:jharaja538@gmail.com"><span>✉️</span><div><small>Email</small><strong>jharaja538@gmail.com</strong></div></a>
-        <a class="contact-card reveal" id="whatsappContact" href="#" target="_blank" rel="noopener"><span>💬</span><div><small>WhatsApp</small><strong>Start a WhatsApp enquiry</strong></div></a>
-        <div class="contact-card reveal"><span>📍</span><div><small>Address</small><strong>Adhloam, Darbhanga, Bihar - 847201</strong></div></div>
-      </div>
-      <div class="map-note reveal"><span>📍</span><div><strong>Google Maps</strong><p>Use the address above to locate the office. Add your exact Google Maps link here when available.</p></div></div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="footer-inner">
-      <div><strong>AS TOUR & TRAVELS</strong><p>Book your journey with us.</p></div>
-      <div class="footer-links">
-        <a href="#privacy">Privacy Policy</a>
-        <a href="#terms">Terms & Conditions</a>
-        <a href="#refund">Refund / Cancellation Policy</a>
-      
+      <div class="counter-side">
+        <h4>Passenger Details</h4>
+        <p>Share full name, age &amp; gender for each passenger on WhatsApp so we can proceed with booking.</p>
+        <div class="notice">
+          Note: Ticket confirmation depends on live seat availability with Indian Railways. We do our best to secure your preferred train and class, but confirmation cannot be guaranteed.
+        </div>
+        <a class="btn btn-outline" target="_blank" rel="noopener" href="https://wa.me/918298500120?text=Namaste%2C%20mujhe%20Train%20Ticket%20Booking%20ke%20baare%20mein%20jaankari%20chahiye.">Or chat directly on WhatsApp →</a>
       </div>
     </div>
-    <div class="footer-bottom">© <span id="year"></span> AS Tour & Travels. All rights reserved.</div>
-  </footer>
+  </div>
+</section>
 
-  <dialog id="policyDialog">
-    <button class="dialog-close" aria-label="Close">×</button>
-    <h2 id="policyTitle"></h2>
-    <div id="policyText"></div>
-  </dialog>
+<!-- ============================== WHY CHOOSE US ============================== -->
+<section id="why-us" class="section-dark perforated-top perforated-bottom">
+  <div class="container">
+    <span class="eyebrow">Why Choose Us</span>
+    <h2>Booking, Made Simple</h2>
 
-  <script src="script.js"></script>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <span class="why-num">01</span>
+        <h3>Easy Booking</h3>
+        <p>Just message us on WhatsApp with your travel details — no app, no login, no long forms.</p>
+      </div>
+      <div class="why-card reveal">
+        <span class="why-num">02</span>
+        <h3>Quick Response</h3>
+        <p>We reply fast on WhatsApp and phone, so you're never left waiting to plan your trip.</p>
+      </div>
+      <div class="why-card reveal">
+        <span class="why-num">03</span>
+        <h3>Transparent Pricing</h3>
+        <p>Clear fare and package pricing upfront — no hidden charges added at the last minute.</p>
+      </div>
+      <div class="why-card reveal">
+        <span class="why-num">04</span>
+        <h3>Customer Support</h3>
+        <p>From enquiry to travel day, we stay with you for support and travel guidance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== ABOUT ============================== -->
+<section id="about">
+  <div class="container">
+    <span class="eyebrow">About Us</span>
+    <h2>AS Tour and Travels</h2>
+
+    <div class="about-grid">
+      <div class="reveal">
+        <p>AS Tour and Travels is a Darbhanga-based travel booking service helping local travellers with train, flight, bus and hotel bookings, cab service, tour packages, and passport/visa assistance — all through a simple WhatsApp conversation.</p>
+        <p>We're based in Laharpur, Adhloam, close to home for travellers across the Bahera and Darbhanga area, and happy to assist over phone or WhatsApp even if you can't visit in person.</p>
+
+        <div class="addr-block">
+          <span class="lbl">Address (English)</span>
+          <p>S/O: Pawan Jha, Near School, Vill. Laharpur, Post Adhloam, Thana Bahera, Adhloam, Darbhanga, Bihar – 847201</p>
+        </div>
+        <div class="addr-block">
+          <span class="lbl">पता (हिंदी)</span>
+          <p>आत्मजः पवन झा, विद्यालय के पास, ग्राम लहरपुर, पोस्ट अधलोआम, थाना बहेरा, अधलोआम, दरभंगा, बिहार – 847201</p>
+        </div>
+      </div>
+
+      <div class="map-frame reveal">
+        <iframe
+          src="https://www.google.com/maps?q=Vill%20Laharpur%2C%20Post%20Adhloam%2C%20Thana%20Bahera%2C%20Darbhanga%2C%20Bihar%20847201&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="AS Tour and Travels location"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== CONTACT ============================== -->
+<section id="contact" class="section-dark perforated-top">
+  <div class="container">
+    <span class="eyebrow">Contact</span>
+    <h2>Reach Out To Us</h2>
+
+    <div class="contact-grid">
+      <a class="contact-card reveal" target="_blank" rel="noopener" href="https://wa.me/918298500120?text=Namaste%2C%20mujhe%20booking%20ke%20baare%20mein%20jaankari%20chahiye.">
+        <span class="contact-icon">💬</span>
+        <span class="lbl">WhatsApp</span>
+        <span class="val">+91 82985 00120</span>
+      </a>
+      <a class="contact-card reveal" href="tel:+918298500120">
+        <span class="contact-icon">📞</span>
+        <span class="lbl">Phone</span>
+        <span class="val">+91 82985 00120</span>
+      </a>
+      <a class="contact-card reveal" href="mailto:jharaja538@gmail.com">
+        <span class="contact-icon">✉️</span>
+        <span class="lbl">Email</span>
+        <span class="val">jharaja538@gmail.com</span>
+      </a>
+      <a class="contact-card reveal" target="_blank" rel="noopener" href="https://www.google.com/maps?q=Vill%20Laharpur%2C%20Post%20Adhloam%2C%20Thana%20Bahera%2C%20Darbhanga%2C%20Bihar%20847201">
+        <span class="contact-icon">📍</span>
+        <span class="lbl">Address</span>
+        <span class="val">Laharpur, Adhloam, Darbhanga, Bihar – 847201</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== FOOTER ============================== -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <a href="#home" class="brand">
+        <span class="brand-mark">AS</span>
+        <span class="brand-name" style="color:#ECF0EA">Tour and Travels</span>
+      </a>
+      <nav class="footer-links">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms &amp; Conditions</a>
+        <a href="refund-policy.html">Refund / Cancellation Policy</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year></span> AS Tour and Travels. All rights reserved.</span>
+      <span>Laharpur, Adhloam, Darbhanga, Bihar – 847201</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================== FLOATING WHATSAPP ============================== -->
+<a class="fab-whatsapp" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"
+   href="https://wa.me/918298500120?text=Namaste%2C%20mujhe%20booking%20ke%20baare%20mein%20jaankari%20chahiye.">
+  <svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.6-.8-1.9-.9-.2-.1-.4-.1-.6.1-.2.3-.7.9-.8 1-.2.2-.3.2-.5.1-.3-.1-1.2-.4-2.3-1.4-.8-.7-1.4-1.6-1.6-1.9-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.4.1-.2 0-.3 0-.5C11.5 9.9 11 8.7 10.8 8.2c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.1 0 1.2.9 2.4 1 2.6.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.6-.6 1.8-1.3.2-.6.2-1.2.2-1.3-.1-.1-.2-.2-.5-.3zM12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.6 1.5 5.2L2 22l4.9-1.3C8.4 21.5 10.1 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+</a>
+
+<script src="script.js"></script>
 </body>
 </html>

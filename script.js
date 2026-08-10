@@ -1,127 +1,92 @@
-// AS Tour & Travels — WhatsApp-only enquiries
-// IMPORTANT: replace the value below with your WhatsApp number in international format,
-// without +, spaces or dashes. Example for India: 919876543210
-const WHATSAPP_NUMBER = "PUT_YOUR_WHATSAPP_NUMBER_HERE";
+// ===========================================================================
+// AS TOUR AND TRAVELS — site script
+// Everything funnels toward WhatsApp: (a) static wa.me anchors already carry
+// prefilled text in the HTML, (b) the train ticket form below assembles a
+// message from the fields and opens WhatsApp with it.
+// ===========================================================================
 
-const menuToggle = document.querySelector(".menu-toggle");
-const nav = document.querySelector(".nav-links");
-menuToggle?.addEventListener("click", () => {
-  const open = nav.classList.toggle("open");
-  menuToggle.setAttribute("aria-expanded", String(open));
-});
-document.querySelectorAll(".nav-links a").forEach(a => a.addEventListener("click", () => nav.classList.remove("open")));
+const WHATSAPP_NUMBER = "918298500120"; // +91 82985 00120
 
-function whatsappLink(message = "Hello AS Tour & Travels, I want to enquire about a travel booking.") {
-  if (!WHATSAPP_NUMBER || WHATSAPP_NUMBER.includes("PUT_YOUR")) return "#contact";
-  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
-}
-
-function setWhatsAppLinks() {
-  ["whatsappHero", "whatsappContact"].forEach(id => {
-    const el = document.getElementById(id);
-    if (el) el.href = whatsappLink();
-  });
-}
-setWhatsAppLinks();
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("visible");
-      observer.unobserve(entry.target);
-    }
-  });
-}, {threshold: .12});
-document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
-
-document.getElementById("year").textContent = new Date().getFullYear();
-
-// Booking enquiries are sent directly to WhatsApp. No Google Sheet or Apps Script is used.
-const bookingForm = document.getElementById("bookingForm");
-const statusEl = document.getElementById("formStatus");
-bookingForm?.addEventListener("submit", event => {
-  event.preventDefault();
-  if (!WHATSAPP_NUMBER || WHATSAPP_NUMBER.includes("PUT_YOUR")) {
-    statusEl.textContent = "Please add your WhatsApp number in script.js first.";
-    statusEl.style.color = "#b42318";
-    return;
-  }
-
-  const data = Object.fromEntries(new FormData(bookingForm).entries());
-  const message = `Hello AS Tour & Travels!%0A%0A*Train Booking Enquiry*%0A%0A*Passenger:* ${data.passengerName}%0A*Phone/WhatsApp:* ${data.phone}%0A*From:* ${data.from}%0A*To:* ${data.to}%0A*Journey Date:* ${data.journeyDate}%0A*Passengers:* ${data.passengers}%0A*Class:* ${data.classPreference}%0A*Message:* ${data.message || "None"}`;
-  window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, "_blank", "noopener");
-  statusEl.textContent = "WhatsApp opened with your enquiry. Please tap Send in WhatsApp.";
-  statusEl.style.color = "#168a45";
-});
-
-const policies = {
-  privacy: {
-    title: "Privacy Policy",
-    text: `<p>When you use this website, your booking details are placed into a WhatsApp message so you can send them directly to AS Tour & Travels. The website does not store your booking enquiry in a Google Sheet or website database.</p><p>WhatsApp may process messages according to its own privacy practices. Do not send passwords, payment PINs, OTPs or other highly sensitive information.</p>`
-  },
-  terms: {
-    title: "Terms & Conditions",
-    text: `<p>All booking requests are enquiries only and are subject to availability, supplier rules, applicable taxes/fees and the information provided by the customer.</p><p>A WhatsApp enquiry is not a confirmed ticket or reservation until the applicable booking provider confirms it.</p><p>We do not promise or advertise a 100% confirmed ticket guarantee.</p>`
-  },
-  refund: {
-    title: "Refund / Cancellation Policy",
-    text: `<p>Refunds and cancellations depend on the rules of the railway, airline, bus operator, hotel, cab provider or tour supplier involved.</p><p>Any service charges or non-refundable amounts will be communicated where applicable before proceeding. Customers should confirm the final cancellation and refund terms for their booking.</p>`
-  }
-};
-const dialog = document.getElementById("policyDialog");
-const policyTitle = document.getElementById("policyTitle");
-const policyText = document.getElementById("policyText");
-function openPolicy(key) {
-  const p = policies[key];
-  if (!p) return;
-  policyTitle.textContent = p.title;
-  policyText.innerHTML = p.text;
-  dialog.showModal();
-}
-document.querySelectorAll("a[href^='#']").forEach(a => {
-  const key = a.getAttribute("href").slice(1);
-  if (policies[key]) a.addEventListener("click", e => { e.preventDefault(); openPolicy(key); });
-});
-document.querySelector(".dialog-close")?.addEventListener("click", () => dialog.close());
-dialog?.addEventListener("click", e => { if (e.target === dialog) dialog.close(); });
-
-
-/* Premium scroll reveal */
 document.addEventListener("DOMContentLoaded", () => {
-  const targets = document.querySelectorAll(
-    "section, .card, .service-card, .package-card, .feature-card, .tour-card, .info-card"
-  );
-  targets.forEach(el => el.classList.add("reveal"));
-
-  const io = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-        observer.unobserve(entry.target);
-      }
+  /* ---- mobile nav toggle ---- */
+  const navToggle = document.querySelector(".nav-toggle");
+  const navLinks = document.querySelector(".nav-links");
+  if (navToggle && navLinks) {
+    navToggle.addEventListener("click", () => {
+      const open = navLinks.classList.toggle("nav-links-open");
+      navToggle.setAttribute("aria-expanded", String(open));
+      navLinks.style.display = open ? "flex" : "";
     });
-  }, {threshold:0.12, rootMargin:"0px 0px -35px 0px"});
+    navLinks.querySelectorAll("a").forEach((a) =>
+      a.addEventListener("click", () => {
+        navLinks.classList.remove("nav-links-open");
+        navLinks.style.display = "";
+      })
+    );
+  }
 
-  targets.forEach(el => io.observe(el));
-});
+  /* ---- scroll reveal ---- */
+  const revealEls = document.querySelectorAll(".reveal");
+  if ("IntersectionObserver" in window && revealEls.length) {
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            io.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+    revealEls.forEach((el) => io.observe(el));
+  } else {
+    revealEls.forEach((el) => el.classList.add("is-visible"));
+  }
 
+  /* ---- train ticket enquiry form -> WhatsApp ---- */
+  const trainForm = document.getElementById("train-form");
+  if (trainForm) {
+    trainForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const data = new FormData(trainForm);
+      const from = (data.get("from") || "").toString().trim();
+      const to = (data.get("to") || "").toString().trim();
+      const date = (data.get("date") || "").toString().trim();
+      const passengers = (data.get("passengers") || "").toString().trim();
+      const travelClass = (data.get("travelClass") || "").toString().trim();
+      const name = (data.get("name") || "").toString().trim();
 
-/* Robust scroll animation for every major section/card */
-document.addEventListener("DOMContentLoaded", function () {
-  const animated = document.querySelectorAll("main section, article, .card, [class*='card'], .service, [class*='service'], .package, [class*='package'], .why-item, .contact-card");
-  animated.forEach((el, i) => {
-    if (!el.classList.contains("reveal")) el.classList.add("reveal");
-    el.style.setProperty("--i", Math.min(i % 7, 6));
+      if (!from || !to || !date) {
+        trainForm.querySelector(".form-error")?.remove();
+        const err = document.createElement("p");
+        err.className = "form-error";
+        err.style.color = "#b03a2e";
+        err.style.fontFamily = "var(--font-mono)";
+        err.style.fontSize = "0.85rem";
+        err.textContent = "Kripya From, To aur Journey Date bharein.";
+        trainForm.prepend(err);
+        return;
+      }
+
+      const lines = [
+        "Namaste AS Tour and Travels,",
+        "Mujhe train ticket book karani hai:",
+        `From: ${from}`,
+        `To: ${to}`,
+        `Journey Date: ${date}`,
+        passengers ? `Passengers: ${passengers}` : null,
+        travelClass ? `Class: ${travelClass}` : null,
+        name ? `Naam: ${name}` : null,
+      ].filter(Boolean);
+
+      const message = encodeURIComponent(lines.join("\n"));
+      window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, "_blank");
+    });
+  }
+
+  /* ---- current year in footer ---- */
+  document.querySelectorAll("[data-year]").forEach((el) => {
+    el.textContent = new Date().getFullYear();
   });
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.08 });
-
-  animated.forEach(el => observer.observe(el));
 });
