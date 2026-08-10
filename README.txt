@@ -1,13 +1,14 @@
-AS TOUR & TRAVELS — PREMIUM VERSION
+AS Tour & Travels — Fixed Visible Animations
 
-Upgraded with:
-- Premium animated headings and gradient underline
-- Scroll reveal animations
-- Staggered card entrance animations
-- Hover lift + shine effect on cards
-- Animated icons and buttons
-- Premium logo hover treatment
+This version includes a robust animation layer designed to work with the existing HTML:
+- Animated header and logo
+- Hero heading entrance + animated underline
+- Animated section headings
+- Card entrance animations with stagger
+- Card lift + shine on hover/touch-capable devices
+- Animated buttons
+- Slow hero background zoom
+- Scroll reveal for sections and cards
 - Reduced-motion accessibility support
-- Existing WhatsApp-only customer enquiry flow retained
 
-Upload all website files to GitHub. Keep the image files in the same folder as index.html.
+Upload ALL files in this ZIP, keeping image files beside index.html.

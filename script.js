@@ -104,3 +104,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
   targets.forEach(el => io.observe(el));
 });
+
+
+/* Robust scroll animation for every major section/card */
+document.addEventListener("DOMContentLoaded", function () {
+  const animated = document.querySelectorAll("main section, article, .card, [class*='card'], .service, [class*='service'], .package, [class*='package'], .why-item, .contact-card");
+  animated.forEach((el, i) => {
+    if (!el.classList.contains("reveal")) el.classList.add("reveal");
+    el.style.setProperty("--i", Math.min(i % 7, 6));
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+
+  animated.forEach(el => observer.observe(el));
+});
