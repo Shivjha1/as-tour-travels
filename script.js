@@ -1,3 +1,7 @@
+const API_URL = "https://script.google.com/macros/s/AKfycbzk4m1yzuyErBKBpHM3fXSy5-fU6XHW0132Ua7cJOq1IZxS0RiPMDRqhTTbGEiD4K-H/exec";
+
+
+
 const phone = "918298500120";
 
 function toggleMenu(){
