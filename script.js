@@ -23,7 +23,19 @@ function sendWhatsApp(event){
   const date = document.getElementById("date").value;
   const className = document.getElementById("className").value;
   const passengers = document.getElementById("passengers").value;
-
+fetch(API_URL, {
+  method: "POST",
+  headers: {
+    "Content-Type": "text/plain;charset=utf-8"
+  },
+  body: JSON.stringify({
+    from: from,
+    to: to,
+    date: date,
+    className: className,
+    passengers: passengers
+  })
+});
   const message =
     "Hello AS Tour & Travels,%0A%0A" +
     "I need railway ticket booking assistance.%0A" +
